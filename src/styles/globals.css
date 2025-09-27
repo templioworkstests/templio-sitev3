@@ -1,0 +1,67 @@
+* { box-sizing: border-box }
+html, body, #root { height: 100% }
+html { scroll-behavior: smooth }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans'; background: var(--bg); color: var(--text); line-height: 1.6 }
+
+a { color: inherit; text-decoration: none }
+img { max-width: 100%; display: block }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px }
+
+section { padding: clamp(64px, 10vw, 120px) 0 }
+h1, h2, h3, h4 { margin: 0 0 16px; line-height: 1.1; letter-spacing: -0.02em }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem) }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem) }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem) }
+p { margin: 0 0 12px; color: var(--muted) }
+
+.header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(10px); background: color-mix(in oklab, var(--bg), transparent 20%); border-bottom: 1px solid var(--border); transform: translateY(0); transition: transform .2s ease }
+.header.hide { transform: translateY(-100%) }
+.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding: 12px 0 }
+.nav-links { display:flex; gap:10px; flex-wrap:wrap; align-items:center }
+.nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); border:1px solid transparent }
+.nav-links a.active, .nav-links a:hover { color: var(--text); border-color: var(--border) }
+.menu-btn { display:none }
+@media (max-width: 960px) {
+  .nav-links { display:none }
+  .nav-links.open { display:flex; width:100% }
+  .menu-btn { display:inline-flex }
+}
+
+.badge { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:white }
+
+.btn { appearance:none; border:none; padding:12px 18px; border-radius:12px; display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:white; font-weight:700; cursor:pointer; transition: transform .08s ease, box-shadow .2s ease; box-shadow: 0 10px 28px rgba(14,165,233,.25) }
+.btn:hover { transform: translateY(-1px) }
+.btn.secondary { background: var(--card); color: var(--text); border:1px solid var(--border); box-shadow:none }
+
+.card { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-1) }
+
+.grid { display:grid; gap:16px }
+.grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)) }
+.grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)) }
+.grid.cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)) }
+
+@media (max-width: 1024px) { .grid.cols-4 { grid-template-columns: repeat(2, minmax(0,1fr)) } }
+@media (max-width: 720px) { .grid.cols-3 { grid-template-columns: 1fr 1fr } }
+@media (max-width: 520px) { .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr } }
+
+.hero { padding: clamp(96px, 14vw, 160px) 0 80px }
+.hero h1 { max-width: 920px }
+.lead { font-size: clamp(1.05rem, 1.5vw, 1.2rem) }
+
+.pills { display:flex; gap:10px; flex-wrap:wrap }
+.pill { border:1px solid var(--border); background:white; color:var(--text); padding:8px 12px; border-radius:999px; cursor:pointer; font-weight:600 }
+.pill.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:white; border-color:transparent }
+
+.projects-grid { display:grid; gap:16px; grid-template-columns: repeat(3, minmax(0,1fr)) }
+@media (max-width: 1024px) { .projects-grid { grid-template-columns: repeat(2, minmax(0,1fr)) } }
+@media (max-width: 640px) { .projects-grid { grid-template-columns: 1fr } }
+
+.project-card { overflow:hidden }
+.project-card header { display:flex; align-items:center; justify-content:space-between; gap:10px }
+.project-card img { width:100%; height:auto }
+
+.testimonials { display:grid; grid-auto-flow:column; gap:16px; grid-auto-columns:min(90%,520px); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom: 8px }
+.testimonials > article { scroll-snap-align:start; border:1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 18px; box-shadow: var(--shadow-1) }
+
+footer { padding: 40px 0 60px; border-top: 1px solid var(--border); margin-top: 40px }
