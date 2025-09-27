@@ -1,5 +1,5 @@
-import Section from './Section'
-import { site } from '../data/content'
+import Section from '@components/Section'
+import { site } from '@data/content'
 
 export default function Contact() {
   const c = site.contact

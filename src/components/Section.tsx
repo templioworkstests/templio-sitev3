@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-export default function Section({ id, title, lead, children }:{ id:string, title:string, lead?:string, children:ReactNode }) {
+export default function Section({ id, title, lead, children }:{ id:string, title:string, lead?:string, children:React.ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`}>
       <div className="container">

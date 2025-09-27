@@ -3,4 +3,12 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@hooks': '/src/hooks',
+      '@components': '/src/components',
+      '@data': '/src/data',
+      '@assets': '/src/assets',
+    }
+  }
 })

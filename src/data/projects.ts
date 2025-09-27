@@ -16,7 +16,7 @@ export const projects: Project[] = [
     what: ['Website','Marketing','Automazioni'],
     summary: 'Pagine leggere, funnel chiaro, remarketing che non fa perdere tempo.',
     kpi: '+18% CR in 6 settimane',
-    cover: new URL('../assets/projects/shop.svg', import.meta.url).toString()
+    cover: new URL('@assets/projects/shop.svg', import.meta.url).toString()
   },
   {
     id: 'p2',
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     what: ['CRM','Automazioni','Strategia & UX'],
     summary: 'Pipeline pulita, scoring, reminder automatici. Il team segue solo contatti caldi.',
     kpi: '-27% tempo perso su lead freddi',
-    cover: new URL('../assets/projects/crm.svg', import.meta.url).toString()
+    cover: new URL('@assets/projects/crm.svg', import.meta.url).toString()
   },
   {
     id: 'p3',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     what: ['Marketing','Website','Strategia & UX'],
     summary: 'Landing, calendario, sponsor. Tutto tracciato, niente sprechi.',
     kpi: '+35% iscrizioni con lo stesso budget',
-    cover: new URL('../assets/projects/event.svg', import.meta.url).toString()
+    cover: new URL('@assets/projects/event.svg', import.meta.url).toString()
   },
   {
     id: 'p4',
@@ -43,6 +43,6 @@ export const projects: Project[] = [
     what: ['App/AI','Automazioni'],
     summary: 'FAQ, preventivi e documenti generati su dati interni.',
     kpi: '-40% ticket ripetitivi',
-    cover: new URL('../assets/projects/ai.svg', import.meta.url).toString()
+    cover: new URL('@assets/projects/ai.svg', import.meta.url).toString()
   },
 ]

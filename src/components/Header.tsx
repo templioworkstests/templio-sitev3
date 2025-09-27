@@ -1,8 +1,8 @@
-import Logo from '../assets/logo.svg?url'
-import { nav } from '../data/content'
-import { useTheme } from '../hooks/useTheme'
-import { useScrollDirection } from '../hooks/useScrollDirection'
-import { useScrollSpy } from '../hooks/useScrollSpy'
+import Logo from '@assets/logo.svg?url'
+import { nav } from '@data/content'
+import { useTheme } from '@hooks/useTheme'
+import { useScrollDirection } from '@hooks/useScrollDirection'
+import { useScrollSpy } from '@hooks/useScrollSpy'
 import { useState } from 'react'
 
 export default function Header() {

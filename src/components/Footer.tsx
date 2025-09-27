@@ -1,5 +1,5 @@
-import Logo from '../assets/logo.svg?url'
-import { nav } from '../data/content'
+import Logo from '@assets/logo.svg?url'
+import { nav } from '@data/content'
 
 export default function Footer() {
   return (

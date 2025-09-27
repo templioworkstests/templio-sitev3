@@ -1,9 +1,9 @@
-# Templio — bbang-like layout (original code + copy)
+# Templio — bbang-like (FIXED)
 
-- Struttura IA e flow simili a bbang.it (nav, WHO/WHAT, progetti, manifesto, contatti)
-- Codice e SVG originali (no asset/HTML/CSS copiati)
-- Copy Templio, semplice e chiaro
-- Responsive, sticky header, scroll spy, filtri progetti
+- Import alias settati (Vite + TS)
+- Hook presenti in `src/hooks` (useTheme, useScrollDirection, useScrollSpy)
+- Header importa dagli alias (niente path rotti)
+- Build Vite: `npm run build` → output `dist`
 
 ## Avvio
 npm install

@@ -1,5 +1,5 @@
-import Section from './Section'
-import { site, who, what } from '../data/content'
+import Section from '@components/Section'
+import { site, who, what } from '@data/content'
 
 export default function WhoWhat() {
   return (

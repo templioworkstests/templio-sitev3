@@ -1,6 +1,6 @@
-import Section from './Section'
-import { what, who } from '../data/content'
-import { projects as data, type Project } from '../data/projects'
+import Section from '@components/Section'
+import { what, who } from '@data/content'
+import { projects as data, type Project } from '@data/projects'
 import { useMemo, useState } from 'react'
 
 function Pills({ items, value, onChange }:{ items: string[], value: string, onChange: (v:string)=>void }) {
